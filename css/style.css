@@ -1,0 +1,404 @@
+/* ==================== Basic ==================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: #f5f7fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+.skip-link {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    z-index: 1000;
+}
+
+.skip-link:focus {
+    position: absolute;
+    left: 16px;
+    top: 16px;
+    width: auto;
+    height: auto;
+    padding: 8px 12px;
+    background: #00274C;
+    color: #fff;
+}
+
+/* ==================== Navbar ==================== */
+.navbar {
+    background: #fff;
+    padding: 16px 24px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    text-align: center;
+}
+
+.nav-container h1 {
+    font-size: 24px;
+    color: #e05a4f;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #444;
+    font-weight: 600;
+    font-size: 19px;
+    padding: 6px 0;
+    position: relative;
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background: #e05a4f;
+    transition: width 0.3s;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+    width: 100%;
+}
+
+.nav-links a.active {
+    color: #e05a4f;
+    font-weight: 800;
+}
+
+/* ==================== Main Containers ==================== */
+#main-content {
+    margin: 24px auto;
+    padding: 0 16px;
+}
+
+.page-header {
+    padding: 12px;
+    text-align: center;
+    background: linear-gradient(135deg, #e05a4f, #ff8a80);
+    color: white;
+}
+
+.page-header h1 {
+    font-size: 32px;
+    font-weight: 600;
+}
+
+.page-card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* ==================== Map Page ==================== */
+
+.search-box {
+    width: 60%;
+    padding: 32px 24px 16px;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.visually-hidden {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+}
+
+
+#search-input {
+    padding: 14px;
+    flex: 1;
+    min-width: 200px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 16px;
+}
+
+#search-btn {
+    padding: 14px 28px;
+    background: #0066cc;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+#map {
+    height: 400px;
+    margin: 0 12px 20px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.checkin-grid-section {
+    padding: 32px 16px 48px;
+}
+
+.checkin-grid-section h2 {
+    margin-bottom: 16px;
+    color: #222;
+}
+
+#checkin-grid {
+    display: grid;
+    gap: 18px;
+    margin-top: 20px;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.checkin-card {
+    background: #f8f9fc;
+    padding: 18px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+#clear-all {
+    margin: 40px auto 0;
+    display: block;
+    padding: 14px 32px;
+    background: #d9363e;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.delete-btn {
+    background: #d9363e;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* ==================== Gallery Page ==================== */
+
+.continent-title {
+    font-size: 28px;
+    font-weight: 800;
+    margin: 20px 0 10px;
+    padding-left: 16px;
+    border-left: 8px solid #e05a4f;
+    text-align: left;
+}
+
+.country-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 24px 12px 12px 12px;
+    padding-left: 4px;
+    padding-right: 4px;
+    color: #444;
+}
+
+.photo-grid {
+    display: grid;
+    gap: 20px;
+    padding: 0 12px;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.photo-card {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.35s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.photo-img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    display: block;
+    border-radius: 16px 16px 0 0;
+    transition: transform 0.4s ease;
+}
+
+.photo-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.18);
+}
+
+.photo-card:hover .photo-img {
+    transform: scale(1.06);
+}
+
+
+.photo-card:focus-visible {
+    outline: 4px solid #e05a4f;
+    outline-offset: 4px;
+    transform: translateY(-8px);
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.18);
+}
+
+.photo-card.expanded {
+    grid-column: 1 / -1;
+    transform: scale(1.02);
+    z-index: 10;
+    box-shadow: 0 24px 48px rgba(0, 0, 0, 0.25);
+    transition: all 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.photo-card.expanded .photo-img {
+    height: auto;
+    max-height: 70vh;
+    object-fit: contain;
+    background: black;
+    border-radius: 16px;
+}
+
+.caption {
+    display: none;
+    padding: 20px;
+    background: white;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.45s ease, transform 0.45s ease;
+}
+
+.photo-card.expanded .caption {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* ==================== Footer ==================== */
+.footer {
+    background: #222;
+    color: #ddd;
+    text-align: center;
+    padding: 24px;
+    margin-top: 40px;
+    font-size: 14px;
+}
+
+
+/* ============ Responsive ============ */
+@media screen and (min-width: 650px) {
+
+    /* navbar */
+    .nav-container {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+    }
+
+    /* map page */
+    #map {
+        height: 520px;
+        margin: 0 24px 24px;
+    }
+
+    #checkin-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    /* gallery titles */
+    .continent-title {
+        text-align: center;
+        padding-left: 0;
+        border-left: none;
+        font-size: 36px;
+        margin: 20px 0 10px;
+        position: relative;
+    }
+
+    .continent-title::after {
+        content: "";
+        display: block;
+        width: 180px;
+        height: 3px;
+        background: linear-gradient(90deg, transparent, #e05a4f, transparent);
+        margin: 20px auto 0;
+        border-radius: 2px;
+    }
+
+    .country-title {
+        font-size: 24px;
+    }
+
+    .photo-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .photo-card.expanded {
+        grid-column: span 2;
+    }
+}
+
+@media screen and (min-width: 880px) {
+
+    #checkin-grid {
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    .country-title {
+        font-size: 26px;
+    }
+
+    .photo-grid {
+        grid-template-columns: repeat(6, 1fr);
+    }
+
+    .photo-card.expanded {
+        grid-column: span 3;
+        max-width: 900px;
+        justify-self: center;
+    }
+}
