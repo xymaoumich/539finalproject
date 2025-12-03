@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trip Overview</title>
+
+    <link rel="stylesheet" href="css/html5reset.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+</head>
+
+<body>
+<a href="#main-content" class="skip-link">Skip to Main Content</a>
+
+<nav class="navbar">
+    <div class="nav-container">
+        <h1>My Travel Journal</h1>
+        <div class="nav-links">
+            <a href="index.html">Map Check-ins</a>
+            <a href="trip.html" class="active">My Routes</a>
+            <a href="gallery.html">Photo Gallery</a>
+        </div>
+    </div>
+</nav>
+
+<main id="main-content" tabindex="-1">
+    <div class="page-card">
+        <header class="page-header">
+            <h2>My Favorite Routes</h2>
+        </header>
+        <div class="tripmap-container">
+            <div id="trip-map" tabindex="0"></div>
+            <aside id="trip-cards"></aside>
+        </div>
+    </div>
+</main>
+
+<footer class="footer">
+    <p>© 2025 My Travel Journal</p>
+</footer>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script type="module" src="js/tripmap.js"></script>
+
+</body>
+</html>

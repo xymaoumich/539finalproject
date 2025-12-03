@@ -62,7 +62,7 @@ export function initMap(loaderFn) {
             const isVisited = visited.some(v => v.id === city.id);
             const marker = L.marker(city.coords, {
                 icon: L.icon({
-                    iconUrl:"https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-red.png",
+                    iconUrl: "https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-red.png",
                     iconSize: [28, 28]
                 })
             }).addTo(map);
