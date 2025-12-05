@@ -249,7 +249,7 @@ export const photos = [
     },
     {
         file: "us4.jpg",
-        title: "Bird's eye view",
+        title: "Bird in the National Park",
         location: "Miami, US",
         description: "I saw many crocodiles and birds in the Shark Valley in the Everglades National Park.",
         country: "US",

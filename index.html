@@ -2,22 +2,24 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Travel Check-ins</title>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
-    <link rel="stylesheet" href="css/html5reset.css">
-    <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome — My Travel Journal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/html5reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body>
+
 <a href="#main-content" class="skip-link">Skip to main content</a>
 
 <nav class="navbar">
     <div class="nav-container">
-        <h1>My Travel Journal</h1>
+        <h1><a href="index.html" class="logo-link">My Travel Journal</a></h1>
         <div class="nav-links">
-            <a href="index.html" class="active">Map Check-ins</a>
+            <a href="index.html" class="active">Home</a>
+            <a href="checkin.html">Map Check-ins</a>
             <a href="trip.html">My Routes</a>
             <a href="gallery.html">Photo Gallery</a>
         </div>
@@ -25,33 +27,62 @@
 </nav>
 
 <main id="main-content" tabindex="-1">
-    <div class="page-card">
-        <header class="page-header">
-            <h2>Mark Your City</h2>
-        </header>
-        <div class="search-box">
-            <label for="search-input" class="visually-hidden">Search City</label>
-            <input type="text" id="search-input" placeholder="Search city (e.g. Tokyo, Paris, London)">
-            <button id="search-btn">Search</button>
+    <div class="home-hero">
+        <img src="pics/us7.jpg" class="hero-img" alt="whale" />
+        <div class="hero-text">
+            <h2>Welcome to My Travel Journal !</h2>
+            <p>
+                Travel has always been my favorite way of understanding the world — by walking its streets, tasting its food,
+                and listening to the rhythm of each country. I’ve spent the past years exploring more than ten nations,
+                capturing the beauty and the spontaneity of the road through the lens of my trusted <strong>Sony A7M3 + 24–240mm</strong>.
+                This camera has seen mountain peaks, desert sunrises, ocean cliffs, and cities that never sleep.
+            </p>
+
+            <p>
+                This website is where all of those journeys come together.
+                I built it as a personal archive — a place to map every country I’ve visited,
+                trace the exact routes I’ve traveled, and organize my photography in a way that tells a story.
+                Each photo, each pin on the map, each trip line drawn is a memory frozen in time.
+                I wanted a space that reflects not just where I’ve been, but how those places felt.
+            </p>
+
+            <p>
+                When you explore this site, I hope you’ll see the world the way I did — not just through photos,
+                but through the emotions, the curiosity, and the quiet moments that inspired them.
+                Traveling changes people.
+                This journal is a small piece of how it changed me.
+            </p>
+
+        </div>
+    </div>
+
+    <div class="home-sections">
+        <div class="home-card">
+            <img src="https://cdn-icons-png.flaticon.com/512/684/684908.png" alt="" class="icon" />
+            <h3>Map Check-ins</h3>
+            <p>Mark every city you've visited and build your personal world map.</p>
+            <a href="checkin.html" class="btn">Go to Map</a>
         </div>
 
-        <div id="map"></div>
+        <div class="home-card">
+            <img src="https://cdn-icons-png.flaticon.com/512/854/854878.png" alt="" class="icon" />
+            <h3>My Routes</h3>
+            <p>See your multi-city trip routes drawn beautifully on an interactive world map.</p>
+            <a href="trip.html" class="btn">View Routes</a>
+        </div>
 
-        <section class="checkin-grid-section">
-            <h2>My Check-ins</h2>
-            <div id="stats"></div>
-            <div id="checkin-grid"></div>
-            <button id="clear-all">Clear All Check-ins</button>
-        </section>
+        <div class="home-card">
+            <img src="https://cdn-icons-png.flaticon.com/512/1829/1829586.png" alt="" class="icon" />
+            <h3>Photo Gallery</h3>
+            <p>Explore your auto-organized gallery by continent and country.</p>
+            <a href="gallery.html" class="btn">Open Gallery</a>
+        </div>
     </div>
 </main>
 
 <footer class="footer">
-    <p>© 2025 Xinyue Mao — My Travel Journal</p>
+    <p>© 2025 My Travel Journal</p>
 </footer>
 
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-<script type="module" src="js/main.js"></script>
 </body>
-
 </html>

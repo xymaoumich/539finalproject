@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Travel Gallery</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/html5reset.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -14,9 +15,10 @@
 
 <nav class="navbar">
     <div class="nav-container">
-        <h1>My Travel Journal</h1>
+        <h1><a href="index.html" class="logo-link">My Travel Journal</a></h1>
         <div class="nav-links">
-            <a href="index.html">Map Check-ins</a>
+            <a href="index.html">Home</a>
+            <a href="checkin.html">Map Check-ins</a>
             <a href="trip.html">My Routes</a>
             <a href="gallery.html" class="active">Photo Gallery</a>
         </div>
@@ -28,6 +30,14 @@
         <header class="page-header">
             <h2>My Travel Gallery</h2>
         </header>
+        <section class="page-intro">
+            <p>
+                Welcome to my travel gallery — a visual archive of moments captured across different countries and continents.
+                Every photo is automatically organized by location, making it easy to explore my journeys through landscapes,
+                architecture, food, and culture. Click any image to view it in an expanded, immersive format.
+            </p>
+        </section>
+
         <div id="gallery"></div>
     </div>
 </main>

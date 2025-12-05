@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trip Overview</title>
-
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/html5reset.css">
     <link rel="stylesheet" href="css/style.css">
 
@@ -17,9 +17,10 @@
 
 <nav class="navbar">
     <div class="nav-container">
-        <h1>My Travel Journal</h1>
+        <h1><a href="index.html" class="logo-link">My Travel Journal</a></h1>
         <div class="nav-links">
-            <a href="index.html">Map Check-ins</a>
+            <a href="index.html">Home</a>
+            <a href="checkin.html">Map Check-ins</a>
             <a href="trip.html" class="active">My Routes</a>
             <a href="gallery.html">Photo Gallery</a>
         </div>
@@ -31,6 +32,14 @@
         <header class="page-header">
             <h2>My Favorite Routes</h2>
         </header>
+        <section class="page-intro">
+            <p>
+                This page showcases the multi-city routes from my travels.
+                Each route is drawn directly on an interactive world map, allowing you to follow the exact path I took
+                from city to city. Select a trip to highlight the full journey — complete with markers, polylines, and detailed trip notes.
+            </p>
+        </section>
+
         <div class="tripmap-container">
             <div id="trip-map" tabindex="0"></div>
             <aside id="trip-cards"></aside>
